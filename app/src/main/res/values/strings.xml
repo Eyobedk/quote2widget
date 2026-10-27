@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quote Widget</string>
+    <string name="widget_name">Quote Widget</string>
+    <string name="widget_description">Shows one of your own quotes. Tap to see another.</string>
+    <string name="widget_empty">No quotes yet. Tap the pencil to add your first one.</string>
+
+    <string name="add_widget">Add widget to home screen</string>
+    <string name="widget_color">Widget color</string>
+    <string name="quote_hint">Type a quote</string>
+    <string name="author_hint">Author (optional)</string>
+    <string name="add_quote">Add quote</string>
+    <string name="empty_list">Your quotes will show up here.</string>
+    <string name="type_a_quote">Type a quote first</string>
+    <string name="edit_quote">Edit quote</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="pin_manual">Long-press your home screen, choose Widgets, then pick Quote Widget.</string>
+</resources>
