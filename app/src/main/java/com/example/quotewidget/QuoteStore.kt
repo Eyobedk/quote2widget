@@ -23,6 +23,8 @@ object QuoteStore {
         Palette("Sunset", 0xFFC2410C.toInt(), 0xFFFFFFFF.toInt()),
         Palette("Rose", 0xFFBE185D.toInt(), 0xFFFFFFFF.toInt()),
         Palette("Paper", 0xFFFFFBEB.toInt(), 0xFF1F2937.toInt()),
+        // Fully transparent background: your wallpaper shows through (white text with a soft shadow).
+        Palette("Transparent", 0x00000000, 0xFFFFFFFF.toInt()),
     )
 
     private fun prefs(ctx: Context) =

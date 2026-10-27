@@ -6,6 +6,7 @@ import android.appwidget.AppWidgetProvider
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
+import android.view.View
 import android.widget.RemoteViews
 
 class QuoteWidgetProvider : AppWidgetProvider() {
@@ -37,7 +38,13 @@ class QuoteWidgetProvider : AppWidgetProvider() {
             val palette = QuoteStore.palette(context)
 
             // Tint the rounded background and recolor the text to match the chosen theme.
-            views.setInt(R.id.widget_bg, "setColorFilter", palette.background)
+            if (palette.background ushr 24 == 0) {
+                // Transparent theme: a zero-alpha tint would leave the white shape visible, so hide it.
+                views.setViewVisibility(R.id.widget_bg, View.GONE)
+            } else {
+                views.setViewVisibility(R.id.widget_bg, View.VISIBLE)
+                views.setInt(R.id.widget_bg, "setColorFilter", palette.background)
+            }
             views.setTextColor(R.id.widget_text, palette.text)
             views.setTextColor(R.id.widget_author, palette.text)
             views.setTextColor(R.id.widget_edit, palette.text)

@@ -120,11 +120,16 @@ class MainActivity : Activity() {
             val dot = View(this).apply {
                 layoutParams = LinearLayout.LayoutParams(dp(40), dp(40)).apply { marginEnd = dp(12) }
                 contentDescription = palette.name
+                val transparent = palette.background ushr 24 == 0
                 background = GradientDrawable().apply {
                     shape = GradientDrawable.OVAL
-                    setColor(palette.background)
-                    if (index == selected) setStroke(dp(3), 0xFFFF9800.toInt())
-                    else setStroke(dp(1), 0x33000000)
+                    // Transparent theme is drawn as a faint disc with a dashed outline.
+                    setColor(if (transparent) 0x14000000 else palette.background)
+                    when {
+                        index == selected -> setStroke(dp(3), 0xFFFF9800.toInt())
+                        transparent -> setStroke(dp(2), 0x88000000.toInt(), dp(4).toFloat(), dp(3).toFloat())
+                        else -> setStroke(dp(1), 0x33000000)
+                    }
                 }
                 setOnClickListener {
                     QuoteStore.setPalette(this@MainActivity, index)
