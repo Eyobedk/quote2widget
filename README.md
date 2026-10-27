@@ -13,7 +13,7 @@ Requires Android 7.0 (API 24) or newer.
 
 ## Getting the APK WITH NO SETUP(ONLY GITHUB)
 
-    GitHub (no setup): Push the folder to a repo. It includes a workflow that builds the APK on each push to main, and you download app-debug.apk from the run’s artifacts.
+    GitHub (no setup): Push the folder to a repo. It includes a workflow that builds the APK on each push to master, and you download app-debug.apk from the run’s artifacts.
 
 ## Build the APK
 
