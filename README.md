@@ -11,7 +11,7 @@ Android app for keeping your own quotes and showing them on your home screen.
 
 Requires Android 7.0 (API 24) or newer.
 
-## Getting the APK WITH NO SETUP(ONLY GITHUB)
+## Getting the APK WITH,NO SETUP(USING ONLY GITHUB)
 
     GitHub (no setup): Push the folder to a repo. It includes a workflow that builds the APK on each push to master, and you download app-debug.apk from the run’s artifacts.
 
